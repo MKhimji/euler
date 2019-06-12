@@ -27,19 +27,6 @@ def prf(n):
                 n=n/i
                 i+=1
 
-def prfm(n):
-        i=2
-        while True:
-                try:
-                        n % i == 0
-                        yield n/i
-                        n=n/i
-                except:
-                        n % i != 0
-                        i+=1
-                        yield n/i
-                        n=n/i
-
 
 
 # prf2 function takes a number and
@@ -53,8 +40,8 @@ def prf2(n):
         i = 2
         while True:
                 if n % i == 0:
-                        yield n/i
                         n=n/i
+                        yield n/i
                 else:
                         i+=1
                         continue
