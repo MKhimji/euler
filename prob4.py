@@ -28,9 +28,17 @@ class Palindrome(object):
 
 # Realised dont need class but all the above helped me to write the answer below.
 def prob4():
-        return [x * y for x in range(100,1000) for y in range(100,1000) if x * y == int(str(x * y)[::-1])]
+        return max([x * y for x in range(100,1000) for y in range(100,1000) if x * y == int(str(x * y)[::-1])])
 
 
+
+
+def compute():
+	ans = max(i * j
+		for i in range(100, 1000)
+		for j in range(100, 1000)
+		if str(i * j) == str(i * j)[ : : -1])
+	return str(ans)
 
 # def prob4(x,y):
 # 	x = 100
