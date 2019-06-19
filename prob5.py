@@ -54,7 +54,8 @@ def tester():
             x+=1
             i=2
         print(x,i)
-
+#prob5 - 232792560 - took about 30 seconds  - 1 min
+#tester takes 25-30min.
 
 def prob5():
     i = 2
@@ -65,7 +66,7 @@ def prob5():
         if x % i != 0:
             x+=1
             i=2
-        print(x,i)
+    return(x,i)
 
 def tester2():
     i = 1
@@ -79,6 +80,41 @@ def tester2():
 # x=21 i=2
 # x=22 i=2
 # x=22 i=3
-#
 
+#############################################################################################
 
+import fractions, math
+def compute1():
+	ans = 1
+	for i in range(1, 21):
+		ans *= i // fractions.gcd(i, ans)
+	return str(ans)
+
+def compute2():
+	ans = 1
+	for i in range(1, 21):
+		ans *= i // math.gcd(i, ans)
+	return str(ans)
+# use math instead of fractions
+
+# the following is from github:
+
+# The smallest number n that is evenly divisible by every number in a set {k1, k2, ..., k_m}
+# is also known as the lowest common multiple (LCM) of the set of numbers.
+# The LCM of two natural numbers x and y is given by LCM(x, y) = x * y / GCD(x, y).
+# When LCM is applied to a collection of numbers, it is commutative, associative, and idempotent.
+# Hence LCM(k1, k2, ..., k_m) = LCM(...(LCM(LCM(k1, k2), k3)...), k_m).
+
+#eg
+
+#i=1
+#1x1//fg(1,1) = 1/1 = 1
+
+#i=2
+#1x2//fg(2,1) = 2/1 = 2
+
+#i=3
+#2x3/gf(3,2) = 6/1 = 6
+
+# and so on. Final answer depends on ans from the previous loop
+# i.e we are getting a value for ans for each iteration.
