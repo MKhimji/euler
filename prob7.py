@@ -45,12 +45,10 @@ def prob8():
             n+=1
         if n % 2 != 0:
             for x in range(n+1, 13):
-                if all(x % n != 0 for j in mylist):
-                    mylist.append(x)
-            return mylist
+                mylist.append(x)
+            if all(x % n+1 != 0 for j in mylist):
 
 
-
-
-
-
+                
+            
+                
