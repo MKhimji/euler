@@ -5,7 +5,7 @@
 
 #my way
 
-def sum_of_primes():
+def sum_prob1():
     i = 0
     my_list=[]
     while i < 1000:
