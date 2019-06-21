@@ -56,7 +56,7 @@ def prob7():
 def prime_gen():
     n=2
     mylist=[]
-    while n < 50:
+    while n > 1:
         if n % 2 == 0:
             n+=1
         if n % 2 != 0:
