@@ -53,7 +53,7 @@ def prob7():
 
 
 
-def prob8():
+def test():
     n=2
     mylist=[]
     while n < 13:
