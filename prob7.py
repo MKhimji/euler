@@ -53,18 +53,24 @@ def prob7():
 
 
 
-def test():
+def prime_gen():
     n=2
     mylist=[]
-    while n < 13:
+    while n < 50:
         if n % 2 == 0:
             n+=1
         if n % 2 != 0:
-            for x in range(n, 2, -1):
+            for x in range(n-1, 2, -1):
                 mylist.append(x)
-            if all(n-1 % x != 0 for x in mylist):
+            if all(n % x != 0 for x in mylist):
                 yield n
-        n+=1
+            n+=1
+def test2():
+    mylist2=[]
+    for x in range(2, 2, -1):
+        mylist2.append(x)
+    return mylist2
+
 
 
 
