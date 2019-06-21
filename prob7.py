@@ -37,6 +37,22 @@ def prob7():
 
 
 
+# def prob8():
+#     n=2
+#     mylist=[]
+#     while n < 13:
+#         if n % 2 == 0:
+#             n+=1
+#         if n % 2 != 0:
+#             for x in range(n, 2, -1):
+#                 mylist.append(x)
+#                 if all(x % n != 0 for j in mylist):
+#                     yield n
+
+
+
+
+
 def prob8():
     n=2
     mylist=[]
@@ -44,11 +60,11 @@ def prob8():
         if n % 2 == 0:
             n+=1
         if n % 2 != 0:
-            for x in range(n+1, 13):
-                if all(x % n != 0 for j in mylist):
-                    mylist.append(x)
-            return mylist
-
+            for x in range(n, 2, -1):
+                mylist.append(x)
+            if all(n-1 % x != 0 for x in mylist):
+                yield n
+        n+=1
 
 
 
