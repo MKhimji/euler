@@ -21,7 +21,8 @@ What is the 10 001st prime number"""
 # if the only numbers that divide a number in range(n) are
 # 1 and n.
 
-def prob7():
+#first thought
+def test():
     n=2
     i=2
     while n<13:
@@ -34,22 +35,11 @@ def prob7():
 
                 pass
 
-
-
-
-# def prob8():
-#     n=2
-#     mylist=[]
-#     while n < 13:
-#         if n % 2 == 0:
-#             n+=1
-#         if n % 2 != 0:
-#             for x in range(n, 2, -1):
-#                 mylist.append(x)
-#                 if all(x % n != 0 for j in mylist):
-#                     yield n
-
-
+def test2():
+    mylist2=[]
+    for x in range(2, 2, -1):
+        mylist2.append(x)
+    return mylist2
 
 # prime_gen gives Memory error @ mylist.append(x)
 
@@ -78,19 +68,14 @@ def prime_gen2():
                 yield n
         n+=1
         
-     
-            
-            
+def prob7(prime_gen2):
+    a = prime_gen2()
+    return next(a for i,a in enumerate(a) if i == 10001)
+
+        
 
 
-
-def test2():
-    mylist2=[]
-    for x in range(2, 2, -1):
-        mylist2.append(x)
-    return mylist2
-
-
+#104761
 
 
 
