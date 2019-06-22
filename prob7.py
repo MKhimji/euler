@@ -65,6 +65,7 @@ def prime_gen():
             if all(n % x != 0 for x in mylist):
                 yield n
             n+=1
+
 def test2():
     mylist2=[]
     for x in range(2, 2, -1):
