@@ -51,7 +51,7 @@ def prob7():
 
 
 
-
+# prime_gen gives Memory error @ mylist.append(x)
 
 def prime_gen():
     n=2
@@ -62,9 +62,11 @@ def prime_gen():
         if n % 2 != 0:
             for x in range(n-1, 2, -1):
                 mylist.append(x)
-            if all(n % x != 0 for x in mylist):
+            if all(n % x != 0 for x in mylist if x % 2!= 0):
                 yield n
             n+=1
+
+
 
 def test2():
     mylist2=[]
