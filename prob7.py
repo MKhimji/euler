@@ -61,10 +61,26 @@ def prime_gen():
             n+=1
         if n % 2 != 0:
             for x in range(n-1, 2, -1):
-                mylist.append(x)
-            if all(n % x != 0 for x in mylist if x % 2!= 0):
+                if x % 2!= 0:
+                    mylist.append(x)
+            if all(n % x != 0 for x in mylist):
                 yield n
             n+=1
+
+def prime_gen2():
+    n=2
+    while n > 1:
+        if n % 2 == 0:
+            n+=1
+        a = range(n-1,2,-1)
+        if n % 2 != 0:
+            if all(n % x != 0 for x in a):
+                yield n
+        n+=1
+        
+     
+            
+            
 
 
 
