@@ -71,6 +71,13 @@ def prob82(n):
         a = (n_str[i:x])
         product = 1
 
+my_gen = prob82(n)
+
+def prob83(my_gen):
+    return max(my_gen)
+
+
+
 
 
 
