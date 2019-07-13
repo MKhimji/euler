@@ -45,12 +45,36 @@ n = int("""73167176531330624919225119674426574742355349194934
 
 n_str = str(n)
 
+#returns product of first 13 digits of n
+
 def prob8(n):
-    a = (n_str[:13])
+    x=13
+    a = (n_str[:x])
     product = 1
-    for i in a:
-        product = product * int(i)
-    return product
+    while i < 1000:
+        a = (n_str[:x])
+        for i in a:
+            product = product * int(i)
+        yield product
+
+def prob82(n):
+    i = 0
+    x = 13
+    a = (n_str[i:x])
+    product = 1
+    while x <= 1000:
+        for v in a:
+            product = product * int(v)
+        yield product
+        i+=1
+        x+=1
+        a = (n_str[i:x])
+        product = 1
+
+
+
+
+
 
 
 
